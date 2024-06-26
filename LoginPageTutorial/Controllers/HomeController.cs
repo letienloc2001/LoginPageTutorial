@@ -18,7 +18,7 @@ namespace LoginPageTutorial.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Signin()
         {
             return View();
         }

@@ -1,0 +1,26 @@
+﻿@model LoginDTO
+@{
+    ViewData["Title"] = "Sign In";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="container">
+    <div class="forms-container">
+        <div class="signin-singup">
+            <form method="post" action="" class="sign-in-form">
+                @* <h2 class="title">Sign in</h2> *@
+                <br>Email</br>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="email" placeholder="email">
+                </div>
+                <br>Password</br>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="password" placeholder="password">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="panels-container"></div>
+</div>
