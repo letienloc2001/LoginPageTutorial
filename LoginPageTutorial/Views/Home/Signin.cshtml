@@ -6,60 +6,47 @@
     src="https://kit.fontawesome.com/64d58efce2.js"
     crossOrigin="anonymous">
 </script>
-@* <div class="container"> *@
 
-    <div class="forms-container">
-        <div class="signin-signup">
-            <form method="post" action="" class="sign-in-form">
-                <h2 class="title">Sign in</h2>
-                @* <div class="name email">Email</div> *@
-                <div class="input-field">
-                    <i class="fas fa-user"></i>
-                    <input type="email" placeholder="email">
-                </div>
-                @* <div class="name password">Password</div> *@
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="password">
-                </div>
-                <input type="submit" value="Sign in" class="btn solid">
-                <p class="social-text">Or sign in with social platforms</p>
-                <p class="social-media">
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </p>
-            </form>
-            <img src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" style="width: 50%;">
-        </div>
-        <div class="panels-container">
-        @* <div class="panel left-panel">
-            <div class="content">
-                <h3>New here ?</h3>
-                <p>dsfsfdsfsf</p>
-                <button class="btn transparent" id="sign-up-btn">Sign up</button>
-                <img src="../../assets/img/student-01.png" alt="img1" class="image">
+
+
+
+<div class="forms-container">
+    <div class="signin-signup">
+        <form method="post" action="" class="sign-in-form">
+            @* <div class="title">ログイン</div> *@
+            @* <div class="name email">Email</div> *@
+            <div class="subtitle social"> ログイン </div>
+            <div class="input-field social">
+                <i class="fab fa-microsoft sign-in"></i>
+                <input type="submit" class="fab fa-microsoft sign-in" value="Microsoftを使用してサインイン" href="#">
             </div>
-        </div>
-        <div class="panel right-panel">
-            <div class="content">
-                <h3>One of us ?</h3>
-                <p>dsfsfdsfsf</p>
-                <button class="btn transparent" id="sign-in-btn">Sign in</button>
-                <img src="../../assets/img/iconA.png" alt="img2" class="image">
+            <div class="input-field social">
+                <i class="fab fa-google sign-in"></i>
+                <input type="submit" class="fab fa-google sign-in" value="Googleを使用してサインイン" href="#">
             </div>
-        </div> *@
+            <h2><span> or </span></h2>
+            <div class="subtitle account">Eメール</div>
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="email" placeholder="Eメール">
+            </div>
+            <div class="subtitle account">パスワード</div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="パスワード">
+                <i class="fa fa-eye input-field-tail" aria-hidden="true"></i>
+            </div>
+            <div class="forget-password" href="#"> パスワードを忘れたのですか？ </div>
+            <input type="submit" value="ログイン" class="btn solid">
+            @* <p class="social-text">Or sign in with social platforms</p> *@
+            
+        </form>
     </div>
-</div>
-    
 
-@* </div> *@
+<div class="logo-image" href="#">
+    <img src="~/images/iconA.png" alt="">
+</div>
+
+<div class="login-background">
+    <img src="~/images/student-01.png" alt="">
+</div>
