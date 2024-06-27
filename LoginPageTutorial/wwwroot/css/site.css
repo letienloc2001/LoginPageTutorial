@@ -50,6 +50,9 @@ input {
   background-color: #ff7f50;
   padding: 0;
   margin: 0;
+  
+  /* overflow-x: visible;
+  overflow-y: hidden; */
 }
 
 .container:before {
@@ -352,6 +355,8 @@ form .input-field .input-field-tail {
 	right: 215px;
 }
 
-.input-field-tail :hover {
+
+form .input-field .input-field-tail :hover {
   cursor: pointer;
 }
+
