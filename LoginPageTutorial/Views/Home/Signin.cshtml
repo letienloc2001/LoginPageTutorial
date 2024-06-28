@@ -1,4 +1,5 @@
 ﻿@model LoginDTO
+@using LoginPageTutorial.Models;
 @{
     ViewData["Title"] = "Sign In";
 }
@@ -10,28 +11,30 @@
 
 <div class="forms-container">
     <div class="signin-signup">
-        <form method="post" action="" class="sign-in-form">
+        <form method="post" class="sign-in-form" asp-controller="Users" asp-action="Login">
             <div class="subtitle social"> ログイン </div>
             <div class="input-field social">
                 <i class="fab fa-microsoft sign-in"></i>
-                <input type="submit" class="fab fa-microsoft sign-in" value="Microsoftを使用してサインイン" href="#">
+                <input type="button" class="fab fa-microsoft sign-in" value="Microsoftを使用してサインイン" href="#">
             </div>
             <div class="input-field social">
                 <i class="fab fa-google sign-in"></i>
-                <input type="submit" class="fab fa-google sign-in" value="Googleを使用してサインイン" href="#">
+                <input type="button" class="fab fa-google sign-in" value="Googleを使用してサインイン" href="#">
             </div>
             <h2><span> or </span></h2>
             <div class="subtitle account">Eメール</div>
             <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="email" placeholder="Eメール">
+                <input type="email" placeholder="Eメール" name="emailAddress">
             </div>
             <div class="subtitle account">パスワード</div>
+            @* <label asp-for="@Model.Email"></label> *@
             <div class="input-field">
                 <i class="fas fa-lock"></i>
                 <i class="fa fa-eye input-field-tail" aria-hidden="true"></i>
-                <input type="password" placeholder="パスワード">
+                <input type="password" placeholder="パスワード" name='password'>
             </div>
+            @* <label asp-for="@Model.Password"></label> *@
             <div class="forget-password" href="#"> パスワードを忘れたのですか？ </div>
             <input type="submit" value="ログイン" class="btn solid">
         </form>

@@ -1,6 +1,7 @@
 ﻿using LoginPageTutorial.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace LoginPageTutorial.Controllers
 {
@@ -49,10 +50,11 @@ namespace LoginPageTutorial.Controllers
         {
             var user = dbContext.Users.FirstOrDefault(x => x.Email == loginDTO.Email && x.Password == loginDTO.Password);
             if (user == null)
-            {
                 return Ok(user);
-            }
-            return NoContent();
+                // return Ok("Login successfully with email " + loginDTO.Email);
+            
+            return BadRequest("Login failed");
+            // return View();
         }
 
         [HttpGet]
@@ -68,7 +70,8 @@ namespace LoginPageTutorial.Controllers
         { 
             var user = dbContext.Users.FirstOrDefault(x => x.UserId == id);
             if (user != null) 
-                return Ok();
+                return Ok(user);
+                // return Ok("User " + user.UserId + "\n- Name: " + user.FirstName + " " + user.LastName + "\n- Email: " + user.Email + "\n- Created on: " + user.CreatedOn);
             else 
                 return NoContent();
         }

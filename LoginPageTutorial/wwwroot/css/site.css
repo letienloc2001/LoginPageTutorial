@@ -28,7 +28,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #ff7f50;
-  /* border: red; */
+  /* background-image: url("~/img/.login-background.png"); */
 }
 
 input {
@@ -59,8 +59,7 @@ input {
   content: '';
   position: absolute;
   width: 100%;
-  height: 200%;
-  max-height: ;
+  height: 200%;  
   border-radius: 50%;
   background: #ffffff;
   top: 0%;
